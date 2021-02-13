@@ -19,7 +19,7 @@
 
 <body>
 
-  <div class="background" style="display: none;">
+  <div id="background" class="background">
     <div class="row">
       <i class="fas fa-heart"></i>
       <i class="fab fa-gratipay"></i>
@@ -630,12 +630,22 @@
     </div>
   </div>
 
+  <!-- <div id="MyClockDisplay" class="clock" onload="showTime()"></div> -->
+  <div id="time" class="time">
+    <div>1 year</div>
+    <div>2 months</div>
+    <div>3 days</div>
+    <div>5 hours</div>
+    <div>20 minutes</div>
+    <div>30 seconds</div>
+  </div>
+
   <div id="card" class="container-lg valentine-container card" style="display: none;">
 
     <p class="display-1">
       Happy Valentine’s Day
     </p>
-    <div id="message" style="display:none">
+    <div id="message" class="message" style="display:none">
       <p id="myMessage1" class="h2 lead">
 
       </p>
@@ -661,9 +671,18 @@
     </div>
   </div>
 
-  <a id="heart">
+  <a id="heart" style="display: none;">
     <div class="click-label display-1">Click me</div>
   </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+
+  <canvas width="640" height="480" id="fireworks-canvas"
+    style="height: 100%; width: 100%; overflow: hidden; position: block; display: none;"></canvas>
+  <script src="js/fireworks.js"></script>
+
 
   <div class="audio-player">
     <audio controls>
@@ -672,16 +691,7 @@
     </audio>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-    crossorigin="anonymous"></script>
   <script src="index.js"></script>
-
-  <canvas width="640" height="480" id="fireworks-canvas"
-    style="height: 100%; width: 100%; overflow: hidden; position: block; display: none;"></canvas>
-  <script src="js/fireworks.js"></script>
-
-
 </body>
 
 </html>

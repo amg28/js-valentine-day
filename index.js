@@ -41,7 +41,12 @@ document.addEventListener("DOMContentLoaded", function () {
     card.style.animation = 'fadeOutAnimation';
     card.style.animationDuration = '3s';
     card.style.animationFillMode = 'forwards';
-    card.style.display = "none";
+
+    setTimeout( () => {card.style.display = "none";}, 1500);
+    
+    const background = document.getElementById('background');
+    background.style.display="none";
+    document.querySelector('body').style.backgroundColor='black';
 
     document.getElementById('fireworks-canvas').style.display = "inline";
     document.getElementById('fireworks-canvas').style.position = "absolute";
@@ -51,8 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let i = 0;
   let j = 0;
   let k = 0;
-  const speed = 35; /* The speed/duration of the effect in milliseconds */
-  const txt1 = "Happy Valentine’s Day to the sweetest valentine I could ever wish for."; /* The text */
+  const speed = 25; /* The speed/duration of the effect in milliseconds */
+  const txt1 = "Happy Valentine’s Day to the sweetest valentine I could ever wish for. :)"; /* The text */
   const txt2 = "I like all the ways that we hang out together, even when we’re mad."
   const txt3 = "And I like the things that are not \nappropriate for a greeting card."
 
@@ -126,3 +131,33 @@ function hoverElement(element) {
   }
 
 }
+
+function showTime(){
+  var date = new Date();
+  var h = date.getHours(); // 0 - 23
+  var m = date.getMinutes(); // 0 - 59
+  var s = date.getSeconds(); // 0 - 59
+  var session = "AM";
+  
+  if(h == 0){
+      h = 12;
+  }
+  
+  if(h > 12){
+      h = h - 12;
+      session = "PM";
+  }
+  
+  h = (h < 10) ? "0" + h : h;
+  m = (m < 10) ? "0" + m : m;
+  s = (s < 10) ? "0" + s : s;
+  
+  var time = h + ":" + m + ":" + s + " " + session;
+  document.getElementById("MyClockDisplay").innerText = time;
+  document.getElementById("MyClockDisplay").textContent = time;
+  
+  setTimeout(showTime, 1000);
+  
+}
+
+showTime();
