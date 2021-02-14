@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const message3 = document.getElementById('message3');
   const message4 = document.getElementById('message4');
 
+
+
   setInterval(function () { backgroundIconSelect(); }, 500);
 
   heart.addEventListener("click", function () {
@@ -18,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     card.style.animation = 'fadeInAnimation';
     card.style.animationDuration = '1.5s';
     card.style.animationFillMode = 'forwards';
+    document.getElementById('audio').play();
   });
 
   quote.addEventListener("click", function () {
