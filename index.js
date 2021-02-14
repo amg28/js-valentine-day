@@ -134,8 +134,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const txt9 = "elegance of a lady... "
   const txt10 = "and (sexy) kinkiness of a woman 😏"
 
-  const txt11 = "In the end,"
-  const txt12 = "For this card I have picked a song called – \"Magnificient\" by Hurts."
+  const txt11 = "Do you also hear a song?"
+  const txt12 = "For this card I have picked a song called – \"Magnificent\" by Hurts."
   const txt13 = "My favourite part of a song is... ‘And hope that fireworks will never end...they never end’"
   const txt14 = "I wish our fireworks will never end too <3"
   const txt15 = "Happy Valentine’s Day, Mira! 😊😘"

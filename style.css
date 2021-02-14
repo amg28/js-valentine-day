@@ -76,6 +76,7 @@ body{
     border-radius: 5%;
     padding: 5%;
     margin: 5%;
+    box-shadow: 0 10px 6px -6px #777;
   }
 
   .quote{
@@ -129,6 +130,7 @@ i:hover{
 
 .proceed{
   font-style: italic;
+  
 }
 
 .clock {
