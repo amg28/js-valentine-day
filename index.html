@@ -13,7 +13,7 @@
 
   <!-- Font Awesome Icons for background -->
   <link href="./fontawesome/css/all.css" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Nixie+One&family=Poiret+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 </head>
 
@@ -630,14 +630,31 @@
     </div>
   </div>
 
-  <!-- <div id="MyClockDisplay" class="clock" onload="showTime()"></div> -->
-  <div id="time" class="time">
-    <div>1 year</div>
-    <div>2 months</div>
-    <div>3 days</div>
-    <div>5 hours</div>
-    <div>20 minutes</div>
-    <div>30 seconds</div>
+  <div id="MyClockDisplay" class="clock">
+    <div class="time-box">
+      <div class="time-label">Years</div>
+      <div id="years" class="time-value"></div>
+    </div>
+    <div class="time-box">
+      <div class="time-label">Months</div>
+      <div id="months" class="time-value"></div>
+    </div>
+    <div class="time-box">
+      <div class="time-label">Days</div>
+      <div id="days" class="time-value"></div>
+    </div>
+    <div class="time-box">
+      <div class="time-label">Hours</div>
+      <div id="hours" class="time-value"></div>
+    </div>
+    <div class="time-box">
+      <div class="time-label">Minutes</div>
+      <div id="minutes" class="time-value"></div>
+    </div>
+    <div class="time-box">
+      <div class="time-label">Seconds</div>
+      <div id="seconds" class="time-value"></div>
+    </div>
   </div>
 
   <div id="card" class="container-lg valentine-container card" style="display: none;">
@@ -645,17 +662,48 @@
     <p class="display-1">
       Happy Valentine’s Day
     </p>
-    <div id="message" class="message" style="display:none">
+    <div id="message1" class="message" style="display:none">
       <p id="myMessage1" class="h2 lead">
-
       </p>
       <p id="myMessage2" class="h2 lead">
-
       </p>
       <p id="myMessage3" class="h2 lead">
-
       </p>
     </div>
+
+    <div id="message2" class="message" style="display:none">
+      <p id="myMessage4" class="h2 lead">
+      </p>
+      <p id="myMessage5" class="h2 lead">
+      </p>
+      <p id="myMessage6" class="h2 lead">
+      </p>
+    </div>
+
+    <div id="message3" class="message" style="display:none">
+      <p id="myMessage7" class="h2 lead">
+      </p>
+      <p id="myMessage8" class="h2 lead">
+      </p>
+      <p id="myMessage9" class="h2 lead">
+      </p>
+      <p id="myMessage10" class="h2 lead">
+      </p>
+    </div>
+
+    <div id="message4" class="message" style="display:none">
+      <p id="myMessage11" class="h2 lead">
+      </p>
+      <p id="myMessage12" class="h2 lead">
+      </p>
+      <p id="myMessage13" class="h2 lead">
+      </p>
+      <p id="myMessage14" class="h2 lead">
+      </p>
+      <p id="myMessage15" class="h2 lead">
+      </p>
+    </div>
+
 
     <div id="quote" class="container quote">
       <figure class="text-end">
@@ -668,10 +716,12 @@
           <cite title="Source Title">Donna Lynn Hope</cite>
         </figcaption>
       </figure>
+
+      <p class="proceed">Please click the card texts to continue :)</p>
     </div>
   </div>
 
-  <a id="heart" style="display: none;">
+  <a id="heart">
     <div class="click-label display-1">Click me</div>
   </a>
 
@@ -685,7 +735,8 @@
 
 
   <div class="audio-player">
-    <audio controls>
+    <!-- <audio controls autoplay> -->
+      <audio controls>
       <source src="./media/song.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
